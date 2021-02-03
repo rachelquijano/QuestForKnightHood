@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4037b4e684d41204eada7cd0b90cdb26, type: 3}
-  m_Name: Room2
+  m_Name: State #3
   m_EditorClassIdentifier: 
-  storyText: I am in room 2.
-  nextStates:
-  - {fileID: 11400000, guid: b1d26f4ba2a5d7b419e6d36a2ef000d9, type: 2}
-  - {fileID: 11400000, guid: 0cfdf06b4bd521e41a35a4f059293127, type: 2}
+  storyText: 
+  choiceTexts: []
+  nextStates: []

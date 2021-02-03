@@ -16,12 +16,13 @@ MonoBehaviour:
     what I was last doing, or how to get back home. I need to find my way out of
     here.
 
-    
 
-    1. Look through the room
 
-    2. Open the door leading outside
-    of the room'
+
+'
+  choiceTexts:
+  - Look through the room.
+  - Open the door leading outside of the room
   nextStates:
-  - {fileID: 11400000, guid: b1d26f4ba2a5d7b419e6d36a2ef000d9, type: 2}
-  - {fileID: 11400000, guid: 2df24b8e64f4eaa4fb0b78dd23febc67, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}

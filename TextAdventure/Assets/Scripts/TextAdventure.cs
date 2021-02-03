@@ -3,34 +3,44 @@ using UnityEngine.UI;
 
 public class TextAdventure : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
+    [SerializeField] Text storyTextComponent;
+    [SerializeField] Text choiceTextComponent1;
+    [SerializeField] Text choiceTextComponent2;
+    [SerializeField] Button choiceButton1;
+    [SerializeField] Button choiceButton2;
     [SerializeField] State startingState;
     State state;
 
     void Start()
     {
         state = startingState;
-        textComponent.text = state.GetStateStory();
+        storyTextComponent.text = state.GetStateStory();
+        choiceTextComponent1.text = state.GetChoiceTexts()[0];
+        choiceTextComponent2.text = state.GetChoiceTexts()[1];
+
+    }
+
+    public void ChoiceButton(int button)
+    {
+        ManageStates(button);
     }
 
 
-    void Update()
+    private void ManageStates(int index)
     {
-        ManageState();
-    }
+        var nextStates = state.GetNextStates();               
+        state = nextStates[index];
+        storyTextComponent.text = state.GetStateStory();
+        choiceTextComponent1.text = state.GetChoiceTexts()[0];
 
-    private void ManageState()
-    {
-        var nextStates = state.GetNextStates();
-
-        for (int index = 0; index < nextStates.Length; index++)
+        if (state.GetNextStates().Length > 1)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1 + index))
-            {
-                state = nextStates[index];
-            }
+            choiceButton2.gameObject.SetActive(true);
+            choiceTextComponent2.text = state.GetChoiceTexts()[1];
         }
-
-        textComponent.text = state.GetStateStory();
+        else
+        {
+            choiceButton2.gameObject.SetActive(false);
+        }
     }
 }

@@ -7,6 +7,8 @@ public class State: ScriptableObject
 {
     [TextArea(14,10)]
     [SerializeField] string storyText;
+    [TextArea(2, 10)]
+    [SerializeField] string[] choiceTexts;
     [SerializeField] State[] nextStates;
 
     public string GetStateStory()
@@ -17,6 +19,8 @@ public class State: ScriptableObject
     {
         return nextStates;
     }
-
-
+    public string[] GetChoiceTexts()
+    {
+        return choiceTexts;
+    }
 }
