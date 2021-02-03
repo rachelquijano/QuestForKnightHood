@@ -25,6 +25,7 @@ public class TextAdventure : MonoBehaviour
         ManageStates(button);
     }
 
+
     private void ManageStates(int index)
     {
         var nextStates = state.GetNextStates();               
