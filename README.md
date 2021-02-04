@@ -1,5 +1,5 @@
-# TextAdventure
-Text Adventure Game
+#Quest For Knighthood
+A Telltale Text Adventure Game
 
 Credits:
 Font Myrlissa by Typhoon Type - Suthi Srisopha Dafont.com
