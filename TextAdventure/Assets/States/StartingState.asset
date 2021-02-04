@@ -24,5 +24,5 @@ MonoBehaviour:
   - Look through the room.
   - Open the door leading outside of the room
   nextStates:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 57fc23d42e8b9b9438162e404e934cbc, type: 2}
+  - {fileID: 11400000, guid: 4df70d294c529354db3e87d8dddea355, type: 2}
