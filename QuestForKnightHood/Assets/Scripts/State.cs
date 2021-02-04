@@ -10,6 +10,7 @@ public class State: ScriptableObject
     [TextArea(2, 10)]
     [SerializeField] string[] choiceTexts;
     [SerializeField] State[] nextStates;
+    [SerializeField] AudioClip voiceLine;
 
     public string GetStateStory()
     {
@@ -22,5 +23,9 @@ public class State: ScriptableObject
     public string[] GetChoiceTexts()
     {
         return choiceTexts;
+    }
+    public AudioClip getVoiceClip()
+    {
+        return voiceLine;
     }
 }

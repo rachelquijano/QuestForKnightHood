@@ -5,58 +5,66 @@ using DG.Tweening;
 
 public class TextAdventure : MonoBehaviour
 {
-    [SerializeField] Text storyTextComponent;
-    [SerializeField] Text choiceTextComponent1;
-    [SerializeField] Text choiceTextComponent2;
+    [Header("UI Elements")]
+    [SerializeField] Text storyText;
+    [SerializeField] Text choiceText1;
+    [SerializeField] Text choiceText2;
     [SerializeField] Button choiceButton1;
     [SerializeField] Button choiceButton2;
-    [SerializeField] State startingState;
-    [SerializeField] AudioSource soundManager;
+    private State state;
+    [Header("Gameplay Settings")]
     [Range(0.0f, 0.1f)]
-    [SerializeField] float delay;
-    State state;
+    [SerializeField] float typeDelay = 0.025f;
+    [Range(0.0f, 0.1f)]
+    [SerializeField] float fadeDelay = 0.5f;
+    [Header("Miscellaneous")]
+    [SerializeField] State startingState;
+    [SerializeField] SoundManager soundM;
+
 
     void Start()
     {
-        int test;
         state = startingState;
-        StartCoroutine(TypeText(delay));
-        choiceTextComponent1.text = state.GetChoiceTexts()[0];
+        soundM.voiceLine.clip = state.getVoiceClip();
+        soundM.voiceLine.Play();
+        StartCoroutine(TypeText(typeDelay));
+        choiceText1.text = state.GetChoiceTexts()[0];
 
     }
 
     public void ChoiceButton(int button)
     {
-        Debug.Log("Text");
         ManageStates(button);
-        soundManager.Play();        
-        
+        soundM.clickSound.Play();        
     }
 
     private void ManageStates(int index)
     {
         var nextStates = state.GetNextStates();               
         state = nextStates[index];
-        StartCoroutine(TypeText(delay));
+        soundM.voiceLine.clip = state.getVoiceClip();
+        soundM.voiceLine.Play();
+        StartCoroutine(TypeText(typeDelay));
         
     }
 
     IEnumerator TypeText(float delay)
     {
 
-        storyTextComponent.text = "";
+        storyText.text = "";
+        soundM.writeSound.Play();
         foreach (char letter in state.GetStateStory().ToCharArray())
         {
-            storyTextComponent.text += letter;
+            storyText.text += letter;
             yield return new WaitForSeconds(delay);
         }
-
-        EnableButton(choiceButton1, choiceTextComponent1, 0);
+        soundM.writeSound.Stop();
+        EnableButton(choiceButton1, choiceText1, 0);
 
 
         if (state.GetNextStates().Length > 1)
         {
-            EnableButton(choiceButton2, choiceTextComponent2, 1);
+            EnableButton(choiceButton2, choiceText2, 1);
         }
 
     }
@@ -64,13 +72,13 @@ public class TextAdventure : MonoBehaviour
     public void EnableButton(Button button, Text text, int choice)
     {
         button.gameObject.SetActive(true);
-        button.image.DOFade(1f, 0.5f);
+        button.image.DOFade(1f, fadeDelay);
         text.DOFade(1f, 0.5f);
         text.text = state.GetChoiceTexts()[choice];
     }
     public void DisableButton(Button button)
     {     
-        button.image.DOFade(0f, 0.5f);        
+        button.image.DOFade(0f, fadeDelay);        
         button.gameObject.SetActive(false);
 
     }

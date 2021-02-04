@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037b4e684d41204eada7cd0b90cdb26, type: 3}
   m_Name: A2. Intro
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: One day, my mother grew very ill. She requested that my sister and I
+    deliver her goods to the castle. I was twelve at the time, and my little sister
+    was ten. We were still very young, but we knew we had to do this for our mother,
+    or we would not be able to afford to buy her the necessary medicine to begin
+    her healing. As we were heading out of the village, raiders from a distant village
+    invaded, destroying everything in their path. My little sister and I began to
+    panic, we weren't really sure what we should do. I told my sister to hide behind
+    a berry bush, and I attempted to rush over to our home and get my mother, but
+    everything happened so fast that it was too late.
   choiceTexts:
-  - sadqwdwqd
+  - Continue...
   nextStates:
-  - {fileID: 11400000, guid: 0cfdf06b4bd521e41a35a4f059293127, type: 2}
+  - {fileID: 11400000, guid: 02c4886caa03631468766e96dadccafa, type: 2}
+  voiceLine: {fileID: 8300000, guid: 775d56d8b73db8e4a84531c28168cae2, type: 3}

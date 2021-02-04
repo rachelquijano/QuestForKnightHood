@@ -23,3 +23,4 @@ MonoBehaviour:
   - Continue...
   nextStates:
   - {fileID: 11400000, guid: 4df70d294c529354db3e87d8dddea355, type: 2}
+  voiceLine: {fileID: 8300000, guid: b03f7c7ada713a04cbc81342cc404265, type: 3}

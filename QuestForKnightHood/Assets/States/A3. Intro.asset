@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4037b4e684d41204eada7cd0b90cdb26, type: 3}
+  m_Name: A3. Intro
+  m_EditorClassIdentifier: 
+  storyText: Our entire village was in flames. A raider rushed over to me and attempted
+    to grab me, but luckily, a man from my village came and saved me with his last
+    breath. I rushed over back to my little sister and grabbed her hand. We ran as
+    fast as we could towards the castle. I don't remember ever running so fast in
+    my life. I felt so many emotions rushing through my mind. Anger, fear, sadness...
+    all kinds of memories from my mother and our village. But I knew I had to be
+    strong, for my sister's sake. This was only the beginning.
+  choiceTexts:
+  - To Be Continued...
+  nextStates:
+  - {fileID: 0}
+  voiceLine: {fileID: 8300000, guid: e26df5bd7772520498f6bc7f7eb86dff, type: 3}
