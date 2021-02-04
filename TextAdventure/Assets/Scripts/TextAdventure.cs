@@ -9,6 +9,7 @@ public class TextAdventure : MonoBehaviour
     [SerializeField] Button choiceButton1;
     [SerializeField] Button choiceButton2;
     [SerializeField] State startingState;
+    [SerializeField] AudioSource soundManager;
     State state;
 
     void Start()
@@ -23,6 +24,7 @@ public class TextAdventure : MonoBehaviour
     public void ChoiceButton(int button)
     {
         ManageStates(button);
+        soundManager.Play();
     }
 
     private void ManageStates(int index)

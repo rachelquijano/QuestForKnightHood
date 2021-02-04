@@ -10,6 +10,7 @@ public class ButtonLogic : MonoBehaviour
     public void SetHoverAnimation()
     {
         transform.DOScale(1.3f, 0.5f);
+        gameObject.GetComponent<AudioSource>().Play();
     }
     public void UndoHoverAnimation()
     {
