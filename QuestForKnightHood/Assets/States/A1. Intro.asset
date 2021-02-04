@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4037b4e684d41204eada7cd0b90cdb26, type: 3}
+  m_Name: A1. Intro
+  m_EditorClassIdentifier: 
+  storyText: My sister and I were just children at the time, unaware of the true
+    hardships of  life. You see, we thought we had everything, as all children do.
+    We had a roof over our heads, we had food and water, and most importantly, we
+    had each other. We were an unbreakable family... for the most part. My sister
+    and I would visit my father whenever my mother could take us into the castle
+    for trading. With all her domestic work, she would also spend time sewing the
+    most beautiful garments, which would be traded at the kingdom's square.
+  choiceTexts:
+  - Continue...
+  nextStates:
+  - {fileID: 11400000, guid: 4df70d294c529354db3e87d8dddea355, type: 2}
