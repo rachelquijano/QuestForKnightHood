@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4037b4e684d41204eada7cd0b90cdb26, type: 3}
   m_Name: Test1
   m_EditorClassIdentifier: 
-  storyText: sedwedwed
+  storyText: I was born into a poor, peasant family in an outlying village. My mother
+    would spend her days tending to the gardens, cooking, cleaning, and caring for
+    my little sister and I. My father was a blacksmith, forging the best weaponry
+    to the royal knights. He lived within castle walls, but did not earn enough to
+    have our family in a proper home. He spent his nights sleeping on the Smithshop
+    floor, with no proper bed. Only a thin cloth to keep himself warm.
   choiceTexts:
   - asdasdas
+  - wedwefwe
   nextStates:
+  - {fileID: 11400000, guid: 0cfdf06b4bd521e41a35a4f059293127, type: 2}
   - {fileID: 11400000, guid: 0cfdf06b4bd521e41a35a4f059293127, type: 2}
